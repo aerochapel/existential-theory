@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Continued Evolution</title>
+
+  <!-- Favicon (cache-busting) -->
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico?v=2" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Wistia Embed Scripts -->
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/d5rnryanot.js" async type="module"></script>
+
+  <style>
+    wistia-player[media-id='d5rnryanot']:not(:defined) {
+      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/d5rnryanot/swatch');
+      display: block;
+      filter: blur(5px);
+      padding-top: 56.25%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      max-width: 300px;
+      margin: 40px auto 20px;
+      display: block;
+    }
+
+    .video-container {
+      max-width: 100%;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+
+    .image-stack {
+      width: 100%;
+    }
+
+    .image-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3px;
+      width: 100%;
+    }
+
+    .image-wrapper img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <img src="static/continued-evolution.svg" alt="Continued Evolution Logo" class="logo">
+
+  <!-- Wistia Video Embed -->
+  <div class="video-container">
+    <wistia-player media-id="d5rnryanot" aspect="1.7777777777777777"></wistia-player>
+  </div>
+
+  <!-- Image Stack -->
+  <div class="image-stack">
+    <div class="image-wrapper"><img src="static/images/airworld.jpg" alt="airworld"></div>
+    <div class="image-wrapper"><img src="static/images/drawing-process.jpg" alt="drawing-process"></div>
+    <div class="image-wrapper"><img src="static/images/drawing001.jpg" alt="drawing001"></div>
+    <div class="image-wrapper"><img src="static/images/drawing002.jpg" alt="drawing002"></div>
+    <div class="image-wrapper"><img src="static/images/drawing003.jpg" alt="drawing003"></div>
+    <div class="image-wrapper"><img src="static/images/drawing004.jpg" alt="drawing004"></div>
+    <div class="image-wrapper"><img src="static/images/figures001.jpg" alt="figures001"></div>
+    <div class="image-wrapper"><img src="static/images/figures002.jpg" alt="figures002"></div>
+    <div class="image-wrapper"><img src="static/images/live-drawing001.jpg" alt="live-drawing001"></div>
+    <div class="image-wrapper"><img src="static/images/live-drawing002.jpg" alt="live-drawing002"></div>
+    <div class="image-wrapper"><img src="static/images/live-drawing003.jpg" alt="live-drawing003"></div>
+    <div class="image-wrapper"><img src="static/images/live-drawing004.jpg" alt="live-drawing004"></div>
+    <div class="image-wrapper"><img src="static/images/living-aerodynamics-car-1.jpg" alt="living-aerodynamics-car-1"></div>
+    <div class="image-wrapper"><img src="static/images/living-aerodynamics-car-2.jpg" alt="living-aerodynamics-car-2"></div>
+    <div class="image-wrapper"><img src="static/images/merckx.jpg" alt="merckx"></div>
+    <div class="image-wrapper"><img src="static/images/profile-picture.jpeg" alt="profile-picture"></div>
+    <div class="image-wrapper"><img src="static/images/yuna-kim.jpg" alt="yuna-kim"></div>
+  </div>
+
+</body>
+</html>
