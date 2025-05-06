@@ -51,6 +51,20 @@
       color: #222;
       text-align: justify;
     }
+    .play-button {
+      display: block;
+      margin: 60px auto 0;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-family: monospace;
+      cursor: pointer;
+      background: none;
+      border: 1px solid #111;
+      color: #111;
+    }
+    .play-button:hover {
+      background-color: #eee;
+    }
     @media (prefers-color-scheme: dark) {
       body {
         background-color: #111;
@@ -67,6 +81,13 @@
       }
       .mission {
         color: #ccc;
+      }
+      .play-button {
+        border-color: #f1f1f1;
+        color: #f1f1f1;
+      }
+      .play-button:hover {
+        background-color: #222;
       }
     }
   </style>
@@ -101,6 +122,15 @@
   <div class="mission">
     Just one bloke on a wicker garden chair in 32 degrees heat, thinking and building on a gaming laptop systems, frameworks, and visions of the future. I believe conventional systems limit human potential. Reality must be framed back to the essence of human nature. We build technology that brings us closer to our humanity, not closer to technology.
   </div>
+
+  <audio id="ginstas-audio">
+    <source src="/static/hello.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button class="play-button" onclick="document.getElementById('ginstas-audio').play()">
+    Click here to enjoy a nice Ginstas pudding
+  </button>
 
 </body>
 </html>
