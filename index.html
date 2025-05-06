@@ -127,14 +127,23 @@
     Just one bloke on a wicker garden chair in 32 degrees heat, thinking and building on a gaming laptop systems, frameworks, and visions of the future. I believe conventional systems limit human potential. Reality must be framed back to the essence of human nature. I build technology that brings us closer to our humanity, not closer to technology.
   </div>
 
-  <audio id="ginstas-audio">
+  <audio id="ginstas-audio" preload="auto">
     <source src="/static/hello.ogg" type="audio/ogg">
     Your browser does not support the audio element.
   </audio>
 
-  <button class="play-button" onclick="document.getElementById('ginstas-audio').play()">
+  <button class="play-button" onclick="playGinstas()">
     CLICK HERE TO ENJOY A NICE GINSTAS PUDDING
   </button>
 
+  <script>
+    function playGinstas() {
+      const audio = document.getElementById('ginstas-audio');
+      audio.load(); // necessary for iOS Safari in some cases
+      audio.play().catch(function(err) {
+        console.log('Audio play failed:', err);
+      });
+    }
+  </script>
 </body>
 </html>
