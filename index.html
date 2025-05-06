@@ -32,7 +32,7 @@
     }
     .project a {
       font-size: 15px;
-      color: #000000;
+      color: #000;
       text-decoration: none;
       display: inline-block;
       margin-bottom: 6px;
@@ -71,28 +71,13 @@
       outline: none;
     }
     @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #111;
-        color: #f1f1f1;
-      }
-      .project a {
-        color: #fff;
-      }
-      .project p {
-        color: #aaa;
-      }
-      .inception {
-        color: #888;
-      }
-      .mission {
-        color: #ccc;
-      }
-      .play-button {
-        color: #f1f1f1;
-      }
-      .play-button:hover {
-        background-color: #222;
-      }
+      body { background: #111; color: #f1f1f1; }
+      .project a { color: #fff; }
+      .project p { color: #aaa; }
+      .inception { color: #888; }
+      .mission { color: #ccc; }
+      .play-button { color: #f1f1f1; }
+      .play-button:hover { background-color: #222; }
     }
   </style>
 </head>
@@ -127,8 +112,10 @@
     Just one bloke on a wicker garden chair in 32 degrees heat, thinking and building on a gaming laptop systems, frameworks, and visions of the future. I believe conventional systems limit human potential. Reality must be framed back to the essence of human nature. I build technology that brings us closer to our humanity, not closer to technology.
   </div>
 
-  <audio id="ginstas-audio" preload="auto">
-    <source src="/static/hello.mp3" type="audio/ogg">
+  <!-- Audio element with MP3 + OGG fallback and playsinline -->
+  <audio id="ginstas-audio" preload="auto" playsinline>
+    <source src="/static/hello.mp3" type="audio/mpeg">
+    <source src="/static/hello.ogg" type="audio/ogg">
     Your browser does not support the audio element.
   </audio>
 
@@ -139,9 +126,10 @@
   <script>
     function playGinstas() {
       const audio = document.getElementById('ginstas-audio');
-      audio.load(); // necessary for iOS Safari in some cases
-      audio.play().catch(function(err) {
-        console.log('Audio play failed:', err);
+      audio.load(); // reinitialize the buffer on some mobile browsers
+      audio.play().catch(err => {
+        console.warn('Playback failed:', err);
+        alert('Tap again to play audio');
       });
     }
   </script>
