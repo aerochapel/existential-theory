@@ -2,37 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>existential_theory</title>
+  <title>Existential Theory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <style>
     body {
       font-family: monospace;
-      background-color: #f9f9f9;
-      color: #111;
+      background: url('/static/paper.png') repeat;
+      color: #9C9587;
       margin: 0;
       padding: 40px 20px;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
-    h1 {
-      font-size: 22px;
-      margin-bottom: 80px;
-      text-align: center;
-      letter-spacing: 1px;
+    .logo {
+      display: block;
+      margin: 0 auto 80px;
+      max-width: 50px;
     }
     .project {
       margin-bottom: 40px;
     }
-    .inception {
-      font-size: 12px;
-      margin-bottom: 4px;
-      color: #666;
-    }
     .project a {
       font-size: 15px;
-      color: #000;
+      color: #BB9040;
       text-decoration: none;
       display: inline-block;
       margin-bottom: 6px;
@@ -40,7 +34,7 @@
     .project p {
       font-size: 13px;
       line-height: 1.5;
-      color: #444;
+      color: #9C9587;
       margin: 0;
       text-align: justify;
     }
@@ -48,86 +42,38 @@
       font-size: 13px;
       line-height: 1.6;
       margin-top: 60px;
-      color: #222;
+      color: #9C9587;
       text-align: justify;
-    }
-    .play-button {
-      display: block;
-      margin: 60px auto 0;
-      padding: 10px 18px;
-      font-size: 13px;
-      font-weight: bold;
-      font-family: monospace;
-      text-transform: uppercase;
-      background: none;
-      border: none;
-      color: #111;
-      cursor: pointer;
-    }
-    .play-button:hover {
-      background-color: #eee;
-    }
-    .play-button:focus {
-      outline: none;
     }
     @media (prefers-color-scheme: dark) {
       body { background: #111; color: #f1f1f1; }
       .project a { color: #fff; }
       .project p { color: #aaa; }
-      .inception { color: #888; }
       .mission { color: #ccc; }
-      .play-button { color: #f1f1f1; }
-      .play-button:hover { background-color: #222; }
     }
   </style>
 </head>
 <body>
-  <h1>existential_theory</h1>
+  <img src="/static/existential-theory.svg" alt="Existential Theory" class="logo">
 
   <div class="project">
-    <div class="inception">inception 2025 present</div>
     <a href="https://cognography.xyz" target="_blank">cognography.xyz</a>
-    <p>the framework that powers bodin: a system that maps cognition into a spatial relational grid.</p>
+    <p>Cognography organizes your reality in three dimensions.</p>
   </div>
 
   <div class="project">
-    <div class="inception">inception 2025 present</div>
     <a href="https://bodin.ai" target="_blank">bodin.ai</a>
-    <p>a diagnostic tool that provides your cognitive blueprint—and an ai that helps you understand it.</p>
+    <p>Your Mind's Architecture</p>
   </div>
 
   <div class="project">
-    <div class="inception">inception 2024 present</div>
     <a href="https://aerochapel.com" target="_blank">aerochapel.com</a>
-    <p>philosophical essays on ai, christianity, cognitive psychology, politics, ethics, futurism, and culture.</p>
+    <p>Aero Chapel publishes articles that reflect on the systems shaping our world to uncover deeper insights and inspire new ways of thinking.</p>
   </div>
 
   <div class="project">
-    <div class="inception">inception 2020 present</div>
     <a href="https://continuedevolution.com" target="_blank">continuedevolution.com</a>
-    <p>ink drawings and virtual worlds exploring uncharted territory of the mind.</p>
+    <p>Visual Art</p>
   </div>
-
-  <!-- Audio element with MP3 + OGG fallback and playsinline -->
-  <audio id="ginstas-audio" preload="auto" playsinline>
-    <source src="/static/hello.mp3" type="audio/mpeg">
-    <source src="/static/hello.ogg" type="audio/ogg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <button class="play-button" onclick="playGinstas()">
-    CLICK HERE TO ENJOY A NICE GINSTAS PUDDING
-  </button>
-
-  <script>
-    function playGinstas() {
-      const audio = document.getElementById('ginstas-audio');
-      audio.load(); // reinitialize the buffer on some mobile browsers
-      audio.play().catch(err => {
-        console.warn('Playback failed:', err);
-        alert('Tap again to play audio');
-      });
-    }
-  </script>
 </body>
 </html>
