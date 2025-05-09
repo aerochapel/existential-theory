@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <style>
-    body {
+    html, body {
       font-family: monospace;
       background: url('/static/paper.png') repeat;
       color: #9C9587;
@@ -15,6 +15,11 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+      /* Disable text selection */
+      -webkit-user-select: none; /* Safari */
+      -moz-user-select: none;    /* Firefox */
+      -ms-user-select: none;     /* IE10+/Edge */
+      user-select: none;         /* Standard */
     }
     .logo {
       display: block;
