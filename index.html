@@ -107,5 +107,13 @@
     <div class="image-wrapper"><img src="static/images/yuna-kim.jpg" alt="yuna-kim"></div>
   </div>
 
+  <script>
+    // Disable right-click context menu on all images
+    document.addEventListener('contextmenu', function(e) {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+      }
+    });
+  </script>
 </body>
 </html>
