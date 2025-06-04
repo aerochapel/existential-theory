@@ -11,25 +11,16 @@
   <!-- Google Fonts: EB Garamond -->
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
-  <!-- Wistia Embed Scripts -->
+  <!-- Wistia Embed Script (only one now) -->
   <script src="https://fast.wistia.com/player.js" async></script>
-  <script src="https://fast.wistia.com/embed/d5rnryanot.js" async type="module"></script>
   <script src="https://fast.wistia.com/embed/qmy4pmpldm.js" async type="module"></script>
 
   <style>
-    wistia-player[media-id='d5rnryanot']:not(:defined),
     wistia-player[media-id='qmy4pmpldm']:not(:defined) {
       background: center / contain no-repeat;
       display: block;
       filter: blur(5px);
       padding-top: 56.25%;
-    }
-
-    wistia-player[media-id='d5rnryanot']:not(:defined) {
-      background-image: url('https://fast.wistia.com/embed/medias/d5rnryanot/swatch');
-    }
-
-    wistia-player[media-id='qmy4pmpldm']:not(:defined) {
       background-image: url('https://fast.wistia.com/embed/medias/qmy4pmpldm/swatch');
     }
 
@@ -44,7 +35,7 @@
     }
 
     .logo {
-      max-width: 180px;
+      max-width: 40px;
       margin: 60px auto 160px;
       display: block;
     }
@@ -88,7 +79,7 @@
 <body>
 
   <!-- Logo -->
-  <img src="static/continued-evolution.jpg" alt="Continued Evolution Logo" class="logo">
+  <img src="static/existential-theory.svg" alt="Continued Evolution Logo" class="logo">
 
   <!-- Image Stack -->
   <div class="image-stack">
@@ -110,10 +101,7 @@
     <div class="image-wrapper"><img src="static/images/profile-picture.jpeg" alt="Existential Theory profile photo – system architect archive"></div>
   </div>
 
-  <!-- Wistia Videos -->
-  <div class="video-container">
-    <wistia-player media-id="d5rnryanot" aspect="1.7777777777777777"></wistia-player>
-  </div>
+  <!-- Wistia Video -->
   <div class="video-container">
     <wistia-player media-id="qmy4pmpldm" aspect="1.7777777777777777"></wistia-player>
   </div>
