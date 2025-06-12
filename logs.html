@@ -1,0 +1,212 @@
+<!-- log.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Existential Theory</title>
+  <meta name="description" content="Essays" />
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+  <style>
+    /*── Custom EB Garamond ─────────────────────────────────────────────────────────*/
+    @font-face {
+      font-family: 'EBGaramond12-Regular';
+      src: url('static/fonts/EBGaramond12-Regular.woff2') format('woff2'),
+           url('static/fonts/EBGaramond12-Regular.woff')  format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'EBGaramond12-Italic';
+      src: url('static/fonts/EBGaramond12-Italic.woff2') format('woff2'),
+           url('static/fonts/EBGaramond12-Italic.woff')  format('woff');
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    body {
+      background: #F0F0ED url('static/paper.png') repeat;
+      color: #9C9587;
+      font-family: 'EBGaramond12-Regular', serif;
+      overflow-x: hidden;
+      /* Disable text selection */
+      -webkit-user-select: none; /* Safari */
+      -moz-user-select: none;    /* Firefox */
+      -ms-user-select: none;     /* IE10+/Edge */
+      user-select: none;         /* Standard */
+    }
+
+    /*── Logo centered at top ───────────────────────────────────────────────────────*/
+    #logo {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+    }
+    .site-logo {
+      width: 50px;
+      object-fit: contain;
+      transition: opacity 0.3s ease;
+    }
+
+    /*── Wrapper & Spacing ──────────────────────────────────────────────────────────*/
+    #log-container .log {
+      margin-bottom: 160px;
+      scroll-margin-top: 140px; /* offset when scrolling into view */
+    }
+    #log-container {
+      max-width: 600px;
+      margin: 200px auto 0;
+      padding: 0 1rem 2rem;
+    }
+
+    /*── Paragraphs ─────────────────────────────────────────────────────────────────*/
+    #log-container .log p {
+      margin-bottom: 1.5em;
+      text-align: justify;
+      font-size: 20px;
+      line-height: 2;
+      color: inherit;
+    }
+
+    /*── Inline links in essay text ─────────────────────────────────────────────────*/
+    #log-container .log p a {
+      color: #BB9040;
+    }
+
+    /*── Titles ─────────────────────────────────────────────────────────────────────*/
+    #log-container .log h1,
+    #log-container .log h2,
+    #log-container .log h3 {
+      color: #BB9040 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 10px !important;
+      text-align: center !important;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 100 !important;
+    }
+
+    /*── Dates ──────────────────────────────────────────────────────────────────────*/
+    #log-container .log time,
+    #log-container .log .date,
+    #log-container .log .post-date,
+    #log-container .log .log-date,
+    #log-container .log small {
+      display: block !important;
+      color: #BB9040 !important;
+      text-align: center !important;
+      margin-bottom: 2em !important;
+      font-size: 0.9rem !important;
+      font-family: 'EBGaramond12-Regular', serif !important;
+    }
+
+    /*── Quotes ─────────────────────────────────────────────────────────────────────*/
+    #log-container .log blockquote,
+    #log-container .log q {
+      font-size: 20px !important;
+      line-height: 2 !important;
+    }
+
+    @media (max-width: 640px) {
+      #log-container {
+        margin: 160px auto 0;
+      }
+    }
+
+    /*── Overlay ───────────────────────────────────────────────────────────────────*/
+    #log-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #F0F0ED url('static/paper.png') repeat;
+      color: #1F1A17;
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
+    #log-overlay.open {
+      transform: translateY(0);
+    }
+    #close-overlay {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+    }
+    #close-overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    #overlay-list {
+      margin-top: 80px;
+      padding: 1rem;
+      overflow-y: auto;
+      max-height: calc(100vh - 100px);
+    }
+    #overlay-list a {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #BB9040;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    #overlay-list a:hover,
+    #overlay-list a:focus {
+      color: #9C9587;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div id="logo">
+    <a href="index.html">
+      <img src="static/existential-theory.svg"
+           alt="Cognography Logo"
+           class="site-logo" />
+    </a>
+  </div>
+
+  <!-- Overlay List -->
+  <div id="log-overlay">
+    <div id="close-overlay">
+      <img src="static/close.svg" alt="Close" />
+    </div>
+    <div id="overlay-list">
+      <ul id="sidebar-list"></ul>
+    </div>
+  </div>
+
+  <!-- Main log feed -->
+  <main id="log-container"></main>
+
+  <!-- Loader & Sidebar population -->
+  <script src="static/js/loadlogs.js"></script>
+
+  <!-- Fade logo on scroll -->
+  <script>
+    const logoEl = document.getElementById('logo');
+    window.addEventListener('scroll', () => {
+      logoEl.style.opacity = window.scrollY > 100 ? '0' : '1';
+    });
+  </script>
+
+    <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+  </script>
+
+</body>
+</html>
