@@ -4,26 +4,15 @@
   <meta charset="UTF-8" />
   <title>Existential Theory</title>
   <meta name="description" content="Existential Theory is a systems architecture studio and creator of Cognography, a framework for structuring cognition.">
-
   <link rel="icon" type="image/x-icon" href="static/favicon.ico?v=2" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <!-- Google Fonts: EB Garamond -->
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-
-  <!-- Wistia Embed Script (only one now) -->
+  <!-- Wistia Embed Script -->
   <script src="https://fast.wistia.com/player.js" async></script>
   <script src="https://fast.wistia.com/embed/qmy4pmpldm.js" async type="module"></script>
 
   <style>
-    wistia-player[media-id='qmy4pmpldm']:not(:defined) {
-      background: center / contain no-repeat;
-      display: block;
-      filter: blur(5px);
-      padding-top: 56.25%;
-      background-image: url('https://fast.wistia.com/embed/medias/qmy4pmpldm/swatch');
-    }
-
     body {
       margin: 0;
       padding: 0;
@@ -40,20 +29,15 @@
       display: block;
     }
 
-    .video-container {
-      max-width: 100%;
-      margin-bottom: 100px;
-      width: 100%;
-    }
-
     .image-stack {
       width: 100%;
     }
 
     .image-wrapper {
       display: flex;
-      justify-content: center;
-      margin-bottom: 100px;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 120px;
       width: 100%;
     }
 
@@ -61,6 +45,29 @@
       width: auto;
       height: auto;
       max-width: 100%;
+      display: block;
+    }
+
+    .caption {
+      text-align: center;
+      margin-top: 16px;
+      max-width: 720px;
+      padding: 0 20px;
+    }
+
+    .caption-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 20px;
+      color: #222;
+      margin: 0 0 8px 0;
+      font-weight: normal;
+    }
+
+    .caption-body {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.5;
+      margin: 0;
     }
 
     .quote-block {
@@ -78,38 +85,178 @@
 </head>
 <body>
 
-  <!-- Logo -->
-  <img src="static/existential-theory.svg" alt="Continued Evolution Logo" class="logo">
+  <img src="static/existential-theory.svg" alt="Existential Theory Logo" class="logo">
 
-  <!-- Image Stack -->
   <div class="image-stack">
-    <div class="image-wrapper"><img src="static/images/merckx.jpg" alt="Eddy Merckx visual reference – early design study by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/drawing-process.jpg" alt="Ballpoint pen drawing process – foundational sketchwork by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/drawing001.jpg" alt="Original pen sketch – architectural illustration by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/drawing002.jpg" alt="Ballpoint drawing – Existential Theory sketch series 2020"></div>
-    <div class="image-wrapper"><img src="static/images/living-aerodynamics-car-1.jpg" alt="Living Aerodynamics – Concept car side view by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/living-aerodynamics-car-2.jpg" alt="Living Aerodynamics – Concept car detail by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/drawing003.jpg" alt="Architectural drawing in pen – conceptual line work by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/drawing004.jpg" alt="Pen sketch with human figures – cognitive framework studies by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/live-drawing001.jpg" alt="Live projection drawing installation – Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/live-drawing002.jpg" alt="Ballpoint projection wall sketch – live performance by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/live-drawing003.jpg" alt="Live sketch – architectural overlay in real space by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/live-drawing004.jpg" alt="Projected art installation – drawing mapped onto wall by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/yuna-kim.jpg" alt="Figure study of Yuna Kim – drawing by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/figures001.jpg" alt="Ink figure studies – anatomy sketches by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/figures002.jpg" alt="Gesture drawing – body form sketches by Existential Theory"></div>
-    <div class="image-wrapper"><img src="static/images/profile-picture.jpeg" alt="Existential Theory profile photo – system architect archive"></div>
+    <div class="image-wrapper">
+      <img src="static/images/merckx.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Cyclist Study – Early Structural Abstraction (2011)</div>
+        <div class="caption-body">An exploratory sketch decomposing the form of a cyclist into intersecting vectors and planes. This drawing initiated the investigation into how motion can be reduced to structural elements, foreshadowing later studies of dynamic, adaptive systems.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/drawing-process.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Process Documentation – Hand Drawing</div>
+        <div class="caption-body">A monochrome photograph capturing the drawing process in detail. This documentation highlights the manual construction of layered dynamic fields, underscoring the intention to create the impression of a living, responsive surface rather than static decoration.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/drawing001.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Living Dynamics – Field Study I (2014)</div>
+        <div class="caption-body">A continuous field of flowing, layered strokes created to simulate an emergent, adaptive surface. This drawing represents an early attempt to visualize a living system capable of dynamic reconfiguration in response to environmental forces.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/drawing002.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Living Dynamics – Field Study II (2014)</div>
+        <div class="caption-body">A further development of the prior study, refining the technique into more deliberate, rhythmic currents. The composition suggests the capacity of form to evolve organically, laying groundwork for later explorations of applied, real-time dynamics.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/living-aerodynamics-car-1.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Dynamic Form – Plan View Study</div>
+        <div class="caption-body">A digital composition visualizing a plan view of a conceptual vehicle in continuous transformation. The form depicts an adaptive aerodynamic surface recalibrating itself in real time as it interacts with its environment.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/living-aerodynamics-car-2.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Dynamic Form – Profile View Sequence</div>
+        <div class="caption-body">A triptych illustrating sequential adaptations of a vehicle’s profile as it traverses space. Each stage depicts a transformation in surface topology, proposing a vision of aerodynamics as an actively evolving system rather than a fixed design.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/drawing003.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Hummingbird – Adaptive Morphology Study</div>
+        <div class="caption-body">A drawing combining the recognizable form of a hummingbird with an emerging structure of flowing, adaptive surfaces. This work bridges representational imagery with abstract system dynamics, suggesting that even organic life follows hidden structural logics.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/drawing004.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Dynamic Anatomy – Back Form</div>
+        <div class="caption-body">An exploration of the human figure rendered as a continuous, evolving field of surface flows. The musculature dissolves into interwoven aerodynamic lines, prefiguring a vision of the body as a living system shaped by movement and perception.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/live-drawing001.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Process Documentation – Live Drawing Preparation</div>
+        <div class="caption-body">A photograph of the artist preparing a live drawing performance. The image captures the direct, tactile engagement with linework and the emergence of dynamic structures in real time.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/live-drawing002.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Live Drawing Installation – Detail</div>
+        <div class="caption-body">An intimate perspective on the artist engaged in the act of drawing, with the visual system projected in large scale behind. This juxtaposition underscores the translation of personal process into collective experience.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/live-drawing003.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Live Drawing Installation – Overview</div>
+        <div class="caption-body">A wide view of the live drawing performance, showing projections of the evolving linework enveloping the audience. This setting emphasizes drawing as both process and immersive environment, merging observer and system.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/live-drawing004.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Live Drawing Installation – Audience Perspective</div>
+        <div class="caption-body">A closer view of the live drawing stage amid the gathered crowd. The work becomes a shared, performative exploration of evolving forms, extending beyond the page into projected space.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/yuna-kim.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Yuna Kim Motion Study</div>
+        <div class="caption-body">Ballpoint pen illustration capturing the kinetic grace of figure skater Yuna Kim. This drawing isolates gesture and momentum through reductive linework, prefiguring later abstractions of movement into form.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/figures001.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Hybrid Studies – Characters and Forms</div>
+        <div class="caption-body">Exploratory sketches blending humanoid figures, animal motifs, and dynamic line fields. This sheet served as a transitional investigation into how abstract flows could integrate with recognizable anatomy.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/figures002.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Collective Figure Study – Masked Observers</div>
+        <div class="caption-body">Large format drawing combining disparate figures, avian elements, and flowing structures. Created as an accumulation of motifs from earlier drawings, unified by a conceptual interest in perception and identity.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/profile-picture.jpeg" alt="">
+      <div class="caption">
+        <div class="caption-title">Self Portrait (2016)</div>
+        <div class="caption-body">3D digital sculpture exploring continuous deformation. The mirrored distortions of the head profile extend the earlier line abstractions into a volumetric, computational medium.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/cognography.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Fragments in Air – Virtual Environment Still</div>
+        <div class="caption-body">Rendered scene of floating shapes in a boundless sky. This visualization attempts to evoke cognitive fragments or perceptual constructs, referencing a mental landscape rather than physical space.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <wistia-player media-id="qmy4pmpldm" aspect="1.7777777777777777"></wistia-player>
+      <div class="caption">
+        <div class="caption-title">Ronin – Cinematic Study of Machine Perception (2024)</div>
+        <div class="caption-body">A real-time virtual film exploring the dissolution of identity in a synthetic environment. Named after the figure of the ronin—a masterless wanderer—the work depicts cognition as seen through the eyes of autonomous machine entities. The sequences merge procedural geometry, atmospheric distortion, and fragmented perspectives into a meditation on perception unanchored from any fixed point of reference.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/seeing-triforms-1.png" alt="">
+      <div class="caption">
+        <div class="caption-title">Virtual Cyborg Mask – Cinematic Still I</div>
+        <div class="caption-body">Unreal Engine film still depicting a reflective mask-like form overlaid with environmental projections. Part of an experiment in real-time rendering and spatial composition.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="static/images/seeing-triforms-2.png" alt="">
+      <div class="caption">
+        <div class="caption-title">Virtual Cyborg Mask – Cinematic Still II</div>
+        <div class="caption-body">Alternate perspective of the same Unreal Engine environment. The image merges virtual sculpture, projected imagery, and camera motion to simulate a synthetic subjectivity.</div>
+      </div>
+    </div>
+
+        <div class="image-wrapper">
+      <img src="static/images/cognography-model.jpg" alt="">
+      <div class="caption">
+        <div class="caption-title">Cognography Model (2025)</div>
+        <div class="caption-body">Hand-assembled physical model representing a three-dimensional cognitive matrix. This construction signaled the transition from visual experimentation into system formalization.</div>
+      </div>
+    </div>
   </div>
 
-  <!-- Wistia Video -->
-  <div class="video-container">
-    <wistia-player media-id="qmy4pmpldm" aspect="1.7777777777777777"></wistia-player>
-  </div>
-
-  <!-- Cognography Image -->
-  <div class="image-wrapper"><img src="static/images/cognography.jpg" alt="Cognography system diagram – www.cognography.xyz"></div>
-
-  <!-- Quote Block Footer -->
   <div class="quote-block">
     <p style="margin: 0 0 20px 0;"><em>
     The work above represents an earlier phase.  
@@ -119,7 +266,6 @@
   </div>
 
 <script>
-  // Disable right-click globally
   document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
   });
