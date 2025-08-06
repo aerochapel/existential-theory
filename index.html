@@ -13,10 +13,13 @@
       overflow: hidden; /* Prevent scrolling */
       width: 100%;
       height: 100%;
+      user-select: none; /* Disable text/image highlighting */
+      -webkit-user-select: none;
+      -ms-user-select: none;
     }
 
     body {
-      background: #FFFFFF;
+      background: #F0F0ED;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -25,8 +28,15 @@
     .logo {
       max-width: 70px;
       display: block;
+      pointer-events: none; /* Disable right-click on image */
     }
   </style>
+  <script>
+    // Disable all right-click
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+  </script>
 </head>
 <body>
   <img src="static/existential-theory.svg" alt="Existential Theory Logo" class="logo">
